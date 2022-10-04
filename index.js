@@ -20,8 +20,8 @@ app.use(
 );
 
 app.use("/api", require("./controllers"));
-app.use(express.static("build"));
-app.use("*", express.static("build"));
+app.use(express.static("public"));
+app.use("*", express.static("public"));
 app.use("/prescription", express.static("uploads"));
 
 mongoose.connect(dbConfig);
